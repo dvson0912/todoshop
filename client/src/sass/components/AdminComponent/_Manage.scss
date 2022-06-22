@@ -1,0 +1,39 @@
+.manage{
+    margin: 10px 0 10px 310px;
+    background-color: white;
+    padding: 30px 15px;
+    &__content{
+        &__top{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        &-link{
+            text-transform: uppercase;
+            color: $white-color;
+            background-color: $primary-color;
+            font-size: 18px;
+            border-radius: 8px;
+            font-weight:700;
+            padding: 10px 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.24);
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+
+            &:hover{
+                color: $primary-color;
+                background-color: $white-color;
+            }
+        }
+
+        &-heading{
+            text-transform: uppercase;
+            color: $primary-color;
+        }
+
+        
+    }
+}

@@ -1,0 +1,39 @@
+// base
+@import './variable';
+@import './mixins';
+@import './reset';
+@import './base';
+
+// component
+@import './components/Loading';
+@import './components/Nav';
+@import './components/MobileNav';
+@import './components/Banner';
+@import './components/Banner2';
+@import './components/SliderProduct';
+@import './components/Product';
+@import './components/PostNew';
+@import './components/Footer';
+@import './components/NavigationProduct';
+@import './components/ProductContent';
+@import './components/ProductSynthetic';
+@import './components/ProductEvaluate';
+@import './components/relatedProducts';
+@import './components/paginate';
+@import './components/Search';
+// user component
+@import './components/UserComponent';
+
+// admin component
+@import './components/AdminComponent/Menu';
+@import './components/AdminComponent/Manage';
+@import './components/AdminComponent/Create';
+
+// page
+@import './pages/Home';
+@import './pages/Product';
+@import './pages/Auth';
+@import './pages/ProductListPage';
+@import './pages//Cart';
+@import './pages/UserPage';
+@import './pages/CheckOut'

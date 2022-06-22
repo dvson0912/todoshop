@@ -1,0 +1,41 @@
+.product-page{
+    margin-left: $width-nav;
+    // overflow: hidden scroll;
+    // height: 100vh;
+
+    @include tablet{
+        margin-left: 0;
+    }
+
+
+    &__container{
+        padding: 30px 45px;
+
+        &-title{
+            font-size: 26px;
+            font-weight: 500;
+            position: relative;
+            margin-top: 60px;
+            border-top: 1px solid $background-gray;
+
+            span{
+                background-color: white;
+                margin: 40px 0 40px 20px;
+                padding: 10px;
+                display: inline-block;
+                position: relative;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background-color: $background-gray;
+                top: 50%;
+                z-index: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+.nav{
+    display: flex;
+    position: fixed;
+    width: $width-nav;
+    flex-direction: column;
+    background-color: $white-color;
+    padding: 30px 0;
+    align-items: center;
+    gap: 25px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+
+    @include tablet{
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        padding: 0 20px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__menu{
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+    }
+
+    &__logo{
+        width: 180px;
+        height: 150px;
+
+        @include tablet{
+            width: 120px;
+            height: 80px;
+        }
+
+        a{
+            height: 100%;
+            img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                }
+        }
+    }
+
+    &__content__list{
+        @include flex(center,space-around);
+        gap: 20px;
+        font-size: 24px;
+
+        @include tablet{
+            gap: 10px;
+        }
+    }
+    &__content__item{
+        position: relative;
+        color: $gray-color;
+        cursor: pointer;
+        a{
+        color: $gray-color;
+        }
+        a:hover {
+            color: $primary-color;
+        } 
+        &:hover {
+            color: $primary-color;
+        }
+        &-count{
+            position: absolute;
+            font-size: 16px;
+            font-weight: 600;
+            color: $white-color;
+            @include flex(center,center);
+            width: 25px;
+            height: 25px;
+            background: $black-color;
+            border-radius: 50%;
+            top: -14px;
+            right: -10px;
+        }
+    }
+
+    &__menu__list{
+        @include flex(flex-start,flex-start);
+        flex-direction: column;
+        width: 100%;
+        text-transform: uppercase;
+        max-height: 350px;
+        overflow: hidden scroll;
+    }
+
+    &__menu__item{
+        width: 100%;
+        font-size: 16px;
+        color: $black-color;
+        text-align: center;
+        font-weight: 600;
+        border-bottom: 1px solid $background-gray;
+        a{
+            width: 100%;
+            display: inline-block;
+        padding: 14px 0;
+        }
+        &:hover{
+            background-color:#f6f2f2;
+        }
+        &:hover span{
+            color: $primary-color;
+            text-decoration: underline $primary-color;
+        }
+    }
+
+    &__call{
+        width: 180px;
+        height: 40px;
+        @include flex(center,flex-start);
+        background: $black-color;
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 400;
+
+        img{
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
+    }
+
+    &__link__list{
+        @include flex(center,center);
+        font-size: 20px;
+        gap: 20px;
+        color:$gray-color;
+    }
+
+    &__link__item{
+        &:hover a {
+            color: $primary-color;
+        }
+    }
+}

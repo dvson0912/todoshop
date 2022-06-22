@@ -1,0 +1,109 @@
+.admin-menu{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    width: 300px;
+    background-color: $primary-color;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius :4px ;
+    overflow: hidden;
+
+    &__heading{
+        font-size: 24px;
+        font-weight: 600;
+        color: $white-color;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    &__list{
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        border-radius: 4px;
+        position: relative;
+
+        &-text{
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        }
+
+        &:hover &-text{
+        color: $primary-color;
+        transition: transform 0.5s;
+        transform: translateX(5px);
+        }
+
+        &:hover{
+        background: $white-color;
+        }
+
+        &:hover::before{
+            content: '';
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: $white-color;
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                box-shadow: 0 45px $white-color;
+                transition: 0.5s;
+        }
+                &:hover::after {
+                    content: '';
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    position: absolute;
+                    top: -25px;
+                    right: 0;
+                    box-shadow: 0 67px $primary-color;
+                    z-index: 0;
+                }
+    }
+
+    &__item.active{
+        background: $white-color;
+
+        &::before {
+                content: '';
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: $white-color;
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                box-shadow: 0 45px $white-color;
+            }
+                &::after {
+                    content: '';
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    position: absolute;
+                    top: -25px;
+                    right: 0;
+                    box-shadow: 0 68px $primary-color;
+                }
+    }
+    &__item.active &__item-text{
+        color: $primary-color;
+        transform: translateX(5px);
+    }
+}

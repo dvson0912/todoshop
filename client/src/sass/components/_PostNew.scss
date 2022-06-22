@@ -1,0 +1,194 @@
+.posts{
+    margin: 40px 30px;
+
+    @include mobile{
+        margin: 20px 10px;
+    }
+    &__top{
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            background-color: $black-color;
+            height: 1px;
+            left: 0;
+            top: 60%;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            background-color: $black-color;
+            height: 2px;
+            left: 0;
+            top: 45%;
+        }
+    }
+
+    &__heading{
+        font-size: 28px;
+        font-weight: 500;
+        text-transform: uppercase;
+        left: 2px;
+        background-color: white;
+        padding: 0 10px;
+        position: relative;
+        z-index: 1;
+
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+
+    &__content{
+        display: flex;
+        margin-top: 20px;
+        gap: 30px;
+
+        &__slide{
+            display: flex;
+            flex: 0 0 60%;
+            max-width: 60%;
+            height: 415px;
+            overflow: hidden;
+            position: relative;
+
+            @include mobile{
+                height: 300px;
+            }
+
+            @include tablet{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            &-list{
+            width: 100%;
+            transition: 0.75s;
+            height: 100%;
+            display: flex;
+            }
+
+            &-item{
+                flex: 0 0 100%;
+                position: relative;
+                max-width: 100%;
+            }
+
+            &-img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+
+            &-bottom{
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 60px;
+                background-color: rgba(255, 255, 255, 0.8);
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                font-weight: 400;
+            }
+
+            &-text{
+                background-color: $primary-color;
+                padding: 4px 10px;
+                font-weight: 700;
+                color: $white-color;
+                margin-bottom: 5px;
+            }
+
+            &-btn{
+                position: absolute;
+                font-size: 24px;
+                z-index: 1;
+                color: $brown-color;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+
+                &--left{
+                    left: 0;
+                }
+                &--right{
+                    right: 0;
+                }
+            }
+        }
+
+        &__right{
+            flex:0 0 35%;
+            max-width: 35%;
+            @include flex(flex-start,flex-start);
+            flex-direction: column;
+            gap: 20px;
+
+            &-list{
+                @include flex(flex-start,space-between);
+                width: 100%;
+                flex: 1;
+                flex-direction: column
+            }
+            &-item{
+                display: flex;
+                gap: 10px;
+                width: 100%;
+            }
+
+            &-img{
+                width: 120px;
+                height: 80px;
+                object-fit: fill;
+            }
+
+            &-body{
+                @include flex(flex-start,space-between);
+                flex-direction: column;
+                
+                flex:1;
+            }
+
+            &-title{
+                font-weight: 400;
+                width: 300px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            &-day{
+                font-size: 12px;
+            }
+
+            &-type{
+                color: $primary-color;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__bottom{
+        margin: 40px auto 0;
+        width: 260px;
+        @include flex(center,center);
+        border: 1px solid black;
+
+        a{
+            width: 100%;
+            padding: 10px 0;
+            display: block;
+
+        }
+        &:hover &-text{
+            border-bottom: 1px solid black;
+        }
+    }
+}

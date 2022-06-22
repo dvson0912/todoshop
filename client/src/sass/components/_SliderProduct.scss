@@ -1,0 +1,46 @@
+.slideproduct{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0 40px;
+    padding:0 0 20px 0;
+
+    @include mobile{
+        margin: 0 10px;
+    }
+
+    &__slider{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    transition: 0.5s;
+    }
+
+    &__list{
+        @include flex(stretch,flex-start);
+        padding: 0 -8px;
+    }
+
+    &__btn{
+        @include flex(center,center);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 26px;
+        color: $white-color;
+        background-color: $black-color;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        z-index: 1;
+
+        &-left{
+            left: 0;
+        }
+        &-right{
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.productListPage{
+    margin-left: $width-nav;
+    @include tablet{
+        margin-top: $height-nav-tablet;
+        margin-left: 0;
+    }
+    &__header{
+        margin-top: 40px;
+        @include flex(center,center);
+        flex-direction:column;
+        text-transform: uppercase;
+            margin-bottom: 40px;
+
+        &-heading{
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        &-list{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px 0;
+            width: 90%;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 0;
+            border-top: 1px solid $background-gray;
+            border-bottom: 1px solid $background-gray;
+        }
+
+        &-item{
+            padding: 0 15px;
+            border-right: 1px solid $background-gray;
+            text-align: center;
+            &:last-child{
+                border-right:none;
+            }
+
+            @include mobile{
+            flex: 0 0 50%;
+            font-size: 14px;
+            &:nth-child(even){
+                border-right: none;
+            }
+            }
+
+            &:hover{
+                color: $primary-color;
+                text-decoration: underline $primary-color;
+            }
+        }
+    }
+
+    &__content{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+}

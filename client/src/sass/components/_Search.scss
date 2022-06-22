@@ -1,0 +1,102 @@
+.search{
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.15);
+
+    &__content{
+        margin: 100px auto 0;
+        width: 50%;
+        background-color: white;
+        display: flex;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 20px;
+
+        @include tablet{
+            width: 70%;
+        }
+        @include mobile {
+            width:90%;
+        }
+
+        &__top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 40px;
+        }
+        
+        &__input{
+            padding: 10px 20px;
+            flex: 1;
+            font-size: 16px;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        }
+
+        &__icon{
+            font-size: 16px;
+
+            &-close{
+                color: $gray-color;
+                cursor: pointer;
+            }
+        }
+
+        &__list{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            gap: 8px;
+            overflow: hidden scroll;
+            max-height: 400px;
+        }
+
+        &__item{
+            
+            &-link{
+                display: flex;
+                gap: 10px;
+                &:hover{
+                    color: $primary-color;
+                    transform: translateX(10px);
+                    transition: 0.25s linear;
+                }
+            }
+
+            &-img{
+                width: 80px;
+                height: 80px;
+                object-fit: fill;
+                flex-shrink: 0;
+            }
+
+            &-body{
+               display: flex;
+                flex-direction: column;
+                flex: 1;
+                gap: 5px;
+                overflow: hidden;
+            }
+
+            &-name{
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 90%;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: capitalize;
+                text-overflow: ellipsis;
+            }
+
+            &-price{
+                font-size: 14px;
+                color: red;
+                font-weight: 400;
+            }
+        }
+    }
+}

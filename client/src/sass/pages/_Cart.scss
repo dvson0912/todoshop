@@ -1,0 +1,48 @@
+.cart{
+    margin-left: $width-nav;
+    background-color: $white-color;
+    padding: 20px;
+
+    @include tablet{
+        margin: $height-nav-tablet 0 0 0;
+        padding: 5px;
+    }
+
+    table{
+        @include mobile{
+            width: 800px;
+        }
+    }
+
+    &__bottom{
+        width: 100%;
+        margin-top: 30px;
+        text-align: right;
+
+        &-title{
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        &-price{
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        &__btns{
+            margin: 40px 0;
+
+            &-button{
+                color: $white-color;
+                margin-left: 10px;
+                background-color: $primary-color;
+                opacity: 0.8;
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

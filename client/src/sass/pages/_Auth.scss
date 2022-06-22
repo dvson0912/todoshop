@@ -1,0 +1,66 @@
+.auth{
+    margin-left: $width-nav;
+    height: 100vh;
+    @include flex(center,center);
+    gap: 40px;
+
+
+    @include tablet{
+        margin-left: 0;
+        height: unset;
+        margin-top: $height-nav-tablet;
+        padding: 40px 0;
+    }
+
+    @include mobile {
+        padding: 20px 0;
+        gap: 10px;
+    }
+
+    &__banner {
+    flex: 0 0 40%;
+    @include mobile {
+        display: none;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    }
+
+    &__content{
+        display: flex;
+            flex-direction: column;
+            flex: 0 0 40%;
+        
+            @include mobile {
+                flex: 0 0 85%;
+            }
+        
+            &-heading {
+                font-size: 38px;
+                text-transform: uppercase;
+            }
+
+            &-title{
+                font-weight: 400;
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+        
+            &__link {
+                text-align: center;
+                margin-top: 10px;
+                font-weight: 400;
+                font-size: 16px;
+        
+                &-a {
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: $primary-color;
+                    margin-left: 4px;
+                }
+            }
+    }
+}

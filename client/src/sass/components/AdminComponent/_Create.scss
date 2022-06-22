@@ -1,0 +1,39 @@
+.create{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include flex(center,center);
+
+    background-color: rgba(0, 0, 0, 0.08);
+
+    &-container{
+        max-height: 80%;
+        border-radius: 10px;
+        overflow: hidden scroll;
+        position: relative;
+    }
+
+    &-content{
+        background-color: $white-color;
+
+        height: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+
+        padding: 40px;
+
+        &__heading{
+            font-size: 24px;
+            text-align: center;
+            text-transform: uppercase;
+
+            padding: 0 20px 30px;
+
+            color:$primary-color;
+        }
+
+        
+    }
+}

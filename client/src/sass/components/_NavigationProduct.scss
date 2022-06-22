@@ -1,0 +1,32 @@
+.navigationProduct{
+    padding: 20px 45px;
+    color: $gray-color;
+    background-color: #F1F1F1;
+
+    @include tablet{
+        margin-top: $height-nav-tablet;
+    }
+
+    &__link{
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &:hover{
+            color: $primary-color;
+            text-decoration: underline $primary-color;
+        }
+    }
+
+    &__space{
+        margin: 0 10px 0 4px;
+        font-size: 12px;
+    }
+
+    &__name{
+        color: $primary-color;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}

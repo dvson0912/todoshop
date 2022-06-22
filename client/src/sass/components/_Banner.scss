@@ -1,0 +1,67 @@
+.banner{
+
+    @include tablet{
+        margin-left:0;
+        margin-top: $height-nav-tablet;
+    }
+    &__slide{
+        scroll-behavior: smooth;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__button{
+        position: absolute;
+        font-size: 50px;
+        font-weight: 600;
+        color: $white-color;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        &--left{
+            left: 20px;
+        }
+        &--right{
+            right: 20px;
+        }
+    }
+
+    &__list{
+        position: relative;
+        display: flex;
+        transition: 0.5s;
+        transform: translateX(0);
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__not-list{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        gap: 10px;
+        @include flex(center,center)
+    }
+    &__not-item{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $white-color;
+        cursor: pointer;
+
+        &:hover{
+            background-color: transparent;
+            border: 1px solid $white-color;
+        }
+    }
+    &__not-item.active{
+        background-color: transparent;
+        border: 1px solid $white-color;
+    }
+}

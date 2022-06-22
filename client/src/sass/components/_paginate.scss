@@ -1,0 +1,41 @@
+.paginate{
+    width: 100%;
+    @include flex(stretch,center);
+    gap: 10px;
+    margin: 40px 0;
+
+    &__item{
+        font-weight: 700;
+        color: $white-color;
+        border-radius: 4px;
+        background-color: $primary-color;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: flex;
+        font-size: 20px;
+
+        a{
+        padding: 5px 10px;
+        height: 100%;
+        flex: 1;
+        @include flex(center, center);
+
+        &:hover{
+            background-color: $white-color;
+                color: $primary-color;
+        }
+        }
+
+        &--disable{
+            cursor: default;
+        padding: 5px 10px;
+        }
+
+        &--current{
+        background-color: $white-color;
+        color: $primary-color;
+        padding: 5px 10px;
+        cursor: default;
+        }
+    }
+}
